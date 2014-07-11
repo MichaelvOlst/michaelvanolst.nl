@@ -1,0 +1,149 @@
+div.projects{
+	font-size: 0; 	 
+	margin-top: 5%;
+	position: relative;
+
+	@media screen and (max-width: $tablet){
+		
+
+	}
+	@media screen and (max-width: $mobile){
+		margin-top: 25%;
+		padding: 0 5% 5% 5%;
+	}
+
+	article{
+		overflow: hidden;
+		width: 100% / 3 * 1;
+		display: inline-block;
+		font-size: 16px;
+		border: 3px solid #F3F3F3;
+		height: 31%;
+		background-color: rgba($darkerblue, 0.8);
+		font-size: 0;
+
+		@media screen and (max-width: $mobile){
+			display: block;
+			width: 100%;
+			margin: 5% auto;
+			background-color: $white;
+			padding: 5%;
+			height: auto;
+			@include box-shadow(0 3px 3px $lightergray);
+		}
+
+		&:hover{
+			img{
+				opacity: 0.5;
+				@include transform(scale(1));
+				@media screen and (max-width: $mobile){
+					@include transform(scale(1.1));
+					opacity: 1;
+				}
+			}
+
+			section.description{
+				opacity: 1;
+				&:before{
+					@include transform(scale(1));
+				}
+			}
+		}
+
+		section.description{
+			color: $white;
+			position: absolute;
+			height:100%;
+			top: 0;
+			left: 0;
+			transform: scale(1.1);
+			width: 100%;
+			box-sizing:border-box;
+			opacity: 0;
+			@include border-radius(5px);
+			@include transition(all 0.35s);
+
+			&:before{
+				position: absolute;
+				top: 30px;
+				right: 30px;
+				bottom: 30px;
+				left: 30px;
+				border: 1px solid $white;
+				content: '';
+				@include transform(scale(1.1));
+				@include transition(all 0.4s ease);
+				
+			}
+
+
+			h2{
+				font-size: 1.5rem;
+				text-align: center;
+				margin-bottom: 5%;
+				color: $white;
+				padding-top: 35%;
+				font-weight: 100;
+				padding-left: 0;
+				@media screen and (max-width: $mobile){
+					margin: 4% auto 0;
+					padding-top: 0;
+					color: $verydarkgray;
+					font-size: 2rem;
+				}
+			}
+
+			p{
+				line-height: 1.5rem;
+				font-size: 1.5rem;
+				padding-left: 6%;
+				@media screen and (max-width: $mobile){
+					font-size: 1rem;
+					line-height: 1rem;
+
+
+				}
+			}
+
+			@media screen and (max-width: $mobile){
+				position: relative;
+				display: block;
+				color: $verydarkgray;
+				display: block;
+				opacity: 1;
+				height: auto;
+				padding: 10%;
+				text-align: left;
+				padding: 0 0 15px 0;
+				overflow: auto;
+				margin: 2% 0;
+				background: none;
+				@include border-radius(0);
+				@include transform(scale(1));
+
+				&:before{
+					@include transform(scale(1));
+					content: '';
+					border: none;
+				}
+			}
+		}
+
+		img{
+			height: 100%;
+			width: 100%;
+			min-height: 300px;
+			max-height: 300px;
+			position: relative;		
+			opacity: 0.8;	
+			@include transition(all 0.35s);
+			@include transform(scale(1.12));
+
+			@media screen and (max-width: $mobile){
+				height: 75%;
+				max-height: 300px;
+				@include transform(scale(1));
+			}
+		}
+	}
+}

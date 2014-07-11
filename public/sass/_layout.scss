@@ -1,0 +1,103 @@
+*,
+:before,
+:after{
+	@include box-sizing(border-box);
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	background: #F3F3F3;
+	color: $darkgray;
+	z-index: 2;
+	
+	a{
+	text-decoration: none;
+	color: darken($darkgray, 10);
+	}
+}
+
+.container-open, .header-open, .footer-open{
+	-webkit-transform: translate3d(-260px, 0, 0) !important;
+	-moz-transform: translate3d(-260px, 0, 0) !important;
+	-ms-transform: translate3d(-260px, 0, 0) !important;
+	-o-transform: translate3d(-260px, 0, 0) !important;
+	transform: translate3d(-260px, 0, 0) !important;
+}
+
+div.about, div.contact, div.projects{
+	padding-top: 100px;
+}
+
+.menu-open{
+	@include translate3d(0, 0 ,0);
+}
+
+ //layout setting
+
+div.layout{
+	max-width: 1200px;
+	margin: 0 auto;
+	z-index: 200;
+	padding: 10px 0;
+	position: relative;
+	
+	h2{
+		text-align: center;
+		margin: 2% 5%;
+		font-size: 1.5rem;
+		color: $lightblue;
+	}	
+}
+
+@import "partials/flash";
+
+@import "partials/buttons";
+
+@import "partials/nav";
+
+@import "partials/header";
+
+@import "partials/banner";
+
+
+section.container{
+	width: 100%;
+	overflow: hidden;
+	min-height: 600px;
+	z-index: 100;
+ 	@include transition (all 200ms ease);
+
+ }
+
+@import "partials/projects";
+
+@import "partials/singleproject";	
+
+@import "partials/about";	
+
+@import "partials/contact";
+
+
+
+@import "partials/admin";
+
+@import "partials/footer";

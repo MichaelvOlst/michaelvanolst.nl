@@ -1,0 +1,281 @@
+.admin-layout{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 200px;
+	position: relative;
+
+	h1{
+		font-size: 1.8rem;
+		margin: 5% 0;
+		text-align: center;
+	}
+}
+
+.btn{
+	position: relative;
+	top: -18px;	
+}
+
+.destroy{
+	position: relative;
+	top: -18px;	
+	padding: 0 20px 0 0;
+	margin: 0;
+}
+
+.btn-naked{
+	background: none;
+	border: none;
+}
+
+#form-only{
+	background: $verydarkgray;
+}
+
+.login{
+	.loginform{
+		max-width: 330px;
+		padding: 3% 15px 1%;
+		margin: 10% auto 0;
+		background-color: $verylightgray;
+
+		h1{
+			font-size: 2rem;
+			line-height: 3rem;
+			margin-bottom: 20px;
+			text-align: center;
+			font-family: 'Nothing You Could Do', cursive;
+		}
+
+		input{
+			display: block;
+			width: 100%;
+			font-family: 'lato', sans-serif;
+			padding: 6px 12px;
+			font-size: 18px;
+			line-height: 1.4em;
+			outline: none;
+			margin: 1% 0;
+			color: $verydarkgray;
+			background-color: $white;
+			border: 1px solid #ccc;
+			@include border-radius(5px);
+			@include transition(all 200ms ease);
+			&:focus{
+				border-color: #66afe9;
+				outline: 0;
+				@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6));
+ 			}
+		}
+
+		input[type="submit"]{
+			background-color: $lightblue;
+ 			width: 100%;
+ 			height: 40px;
+ 			@include border-radius(5px);
+ 			margin-top: 20px;
+ 			-webkit-appearance: none;
+ 			-moz-appearance: none;
+ 			font-size: 1.2rem;
+ 			cursor: pointer;
+ 			color: $white;
+
+ 			&:hover, &:focus{
+ 				background-color: $mediumdarkblue;
+ 				color: $white;
+ 				@include box-shadow(none);
+ 			}
+		}
+	}
+}
+
+.admin-nav{
+	background: $verydarkgray;
+	left: 0;
+	overflow: hidden;
+	top: 0px;
+	width: 200px;
+	position: fixed;
+	height: 100%;
+	z-index: 201;
+
+	ul{
+		list-style-type: none;
+ 		position: relative;
+ 		top: 0%;
+		li{
+			border-bottom: 1px solid #353333;
+			border-top: 1px solid #777474;
+			display: block;
+			font-size: 1.2rem;
+			left: 0;
+			position: relative;
+			width: 100%;
+
+		    &:first-child{
+				border-top: none;
+			 } // first child
+
+			&:last-child{
+			    border-bottom: none;
+			    padding-bottom: 1%;
+			} // last-child
+
+			&:hover{
+			    background: #333;
+			}// hover
+		
+			a{
+				display: block;
+				padding: 5% 0;
+				width: 100%;
+				text-decoration: none;
+				color: $white;
+				font-size: 0.9rem;
+				text-align: center;
+				@include transition(all 200ms ease-out);
+
+				&:hover{
+					color: $lightblue;
+				} // end hover	
+				i{
+					width: 100%;
+					display: block;
+					font-size: 1.5rem;
+					padding-bottom: 10px;
+				}
+				
+			}
+		}
+	}	
+}
+
+.admin-project{
+	.btn-primary{
+		margin-top: 20px;
+	}
+
+}
+
+.dashboard{
+	
+}
+
+.admin{
+	.button{
+		width: 30%;
+		background-color: $lightblue;
+		//height: 30px;
+		font-size: 0.8rem;
+		border: none;
+		height: 10%;
+		padding: 0 20px;
+		margin: 0;
+		&:hover{
+			background: $blue;
+		}
+	}
+}
+
+.about-admin{
+
+	.form-group{
+		.button{
+			width: 100%;
+		}
+	}
+
+	article{
+		background: $white;
+		@include border-radius(5px);
+		padding: 3%;
+		@include box-shadow(0 0 5px rgba($black, 0.1));
+		min-height: 200px;
+		margin-bottom: 20px;
+	}
+
+	.edit-delete{
+		margin-top: 30px;
+	}
+
+	h4{
+		font-size: 1.8rem;
+		margin-bottom: 10px;
+	}
+
+	.button{
+		width: 20%;
+		background: $lightblue;
+		@include border-radius(5px);
+		text-align: center;
+		text-decoration: none;
+		height: 5%;
+		padding: 0 10px;
+		margin: 0 10px 0 0;
+		color: $white;
+
+		&:hover{
+			background-color: $blue;
+		}
+	}
+}
+
+.skills-admin{
+
+	.form-group{
+		.button{
+			width: 100%;
+		}
+	}
+
+	.progress-bar-succes{
+		background-color: #5CB85C;
+	}
+
+	.progress-bar-warning{
+		background-color: #F0AD4E;
+	}
+
+	.progress-bar-danger{
+		background-color: #D9534F;
+	}
+
+	article{
+		background: $white;
+		@include border-radius(5px);
+		padding: 3%;
+		@include box-shadow(0 0 5px rgba($black, 0.1));
+		min-height: 200px;
+		margin-bottom: 20px;
+	}
+
+	.edit-delete{
+		margin-top: 30px;
+	}
+
+	h4{
+		font-size: 1.4rem;
+		margin-bottom: 10px;
+	}
+
+	.button{
+		width: 20%;
+		background: $lightblue;
+		@include border-radius(5px);
+		text-align: center;
+		text-decoration: none;
+		height: 5%;
+		padding: 0 10px;
+		margin: 0 10px 0 0;
+		color: $white;
+
+		&:hover{
+			background-color: $blue;
+		}
+	}
+}
+
+
+
+
+

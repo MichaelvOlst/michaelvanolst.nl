@@ -1,0 +1,41 @@
+div.banner{	
+	background: url('../images/ocean.jpg') no-repeat 50%;
+	background-size: cover;
+	background-color: $verydarkgray;
+	width: 100%;	
+	position: relative;
+	min-height: 600px;
+	border-bottom: 1px solid $verydarkgray;
+	
+	div.intro{
+		background-color: transparent;
+	    margin: 20% auto 11%;
+	    position: relative;
+	    text-align: center;
+	    width: 100%;
+	    min-width: 220px;
+	    @include border-radius(5px);
+	    @media screen and (max-width: $mobile){
+	    	width: 90%;
+	    }
+
+		h1{
+			margin: 30px auto;
+			padding-bottom: 15%;
+			line-height: 5rem;
+			width: 100%;
+			color: $white;
+			font-size: 4rem;
+			font-weight: 600;
+			//font-style: italic;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		.button{
+			width: 50%;
+ 			@media screen and (max-width: $mobile){
+				width: auto;
+			}
+		}
+	}
+}

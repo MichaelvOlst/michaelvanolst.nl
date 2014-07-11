@@ -1,0 +1,91 @@
+nav.main-nav{
+	background: $white;
+	right: 0;
+	overflow: hidden;
+	top: 0px;
+	width: 260px;
+	position: fixed;
+	height: 100%;
+	opacity: 1;
+	box-shadow: inset 3px 0px 5px 1px rgba($verydarkgray, 0.3);
+	z-index: 1;
+	@include translate3d(260px, 0 ,0);
+	@include transition (all 200ms ease);
+
+	@media screen and (max-width: $mobile){
+		overflow-y: scroll;
+		top: 0;
+		@include translate3d(100%, 0 ,0);
+	}
+
+	ul{
+ 		list-style-type: none;
+ 		position: relative;
+ 		padding-top: 50%;
+
+			li{
+				
+				display: block;
+				font-size: 1.2rem;
+				left: 0;
+				position: relative;
+				width: 100%;
+				@include transition(all 500ms ease-out);
+
+
+				&:last-child{
+				    border-bottom: none;
+				    padding-bottom: 1%;
+				} // last-child
+
+			
+				
+				.active{
+					color: $lightblue;
+				} // end active
+
+			
+				a{
+					display: block;
+					padding: 5% 0;
+					width: 100%;
+					color: lighten($verydarkgray, 8);
+					text-align: center;
+					@include transition(all 200ms ease-out);
+
+					&:hover{
+						color: $lightblue;
+					} // end hover	
+				} // end a
+			}// li
+
+			li.close a {
+				font-size: 1.5rem;	
+				font-weight: bolder;	
+				display: block;
+				padding: 4% 0;
+				width: 100%;
+				color: lighten($verydarkgray, 8);
+				cursor: pointer;
+				text-align: center;
+				@include transition(all 200ms ease-out);
+
+				&:hover{
+						color: $lightblue;
+
+				} // end hover
+			}
+ 		}// ul
+ 	}// main-menu
+
+.container-open, .header-open, .footer-open{
+	@include translate3d(-260px, 0 ,0);
+}
+
+.menu-open{
+	-webkit-transform: translate3d(0, 0, 0) !important;
+	-moz-transform: translate3d(0, 0, 0) !important;
+	-ms-transform: translate3d(0, 0, 0) !important;
+	-o-transform: translate3d(0, 0, 0) !important;
+	transform: translate3d(0, 0, 0) !important;
+}
