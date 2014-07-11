@@ -12,3 +12,4 @@ Vagrantfile
 *.sass-cache
 *uploads
 /public/uploads/*
+/public/sass/*
