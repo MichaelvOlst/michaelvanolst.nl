@@ -1,4 +1,4 @@
-<?php namespace Vanolst\Images;
+<?php namespace vanolst\Images;
 
 use Intervention\Image\ImageManagerStatic as Image;
 use Projects;
