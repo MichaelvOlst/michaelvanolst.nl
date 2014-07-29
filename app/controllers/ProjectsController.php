@@ -71,7 +71,7 @@ class ProjectsController extends \BaseController {
 	public function show($slug)
 	{
 	  
-	 	$project = Projects::with('images')->whereSlug($slug)->get();
+	 	$project = Projects::with('images')->whereSlug($slug)->first();
 
 		if (!$project){
 			return Redirect::route('projects.index')->with('flash_message_wrong', 'Project doesn\'t exists !');
