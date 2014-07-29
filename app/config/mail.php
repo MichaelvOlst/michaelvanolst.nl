@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'michaelvolst@gmail.com', 'name' => 'Michael van Olst'),
+	'from' => array('address' => getenv('EMAIL_ADDRESS'), 'name' => 'Michael van Olst'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => get_env('EMAIL_ADDRESS'),
+	'username' => getenv('EMAIL_ADDRESS'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => get_env('EMAIL_PASSWORD'),
+	'password' => getenv('EMAIL_PASSWORD'),
 
 	/*
 	|--------------------------------------------------------------------------
