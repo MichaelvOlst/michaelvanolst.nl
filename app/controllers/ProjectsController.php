@@ -1,6 +1,6 @@
 <?php
 
-use \vanolst\Images\ImageSaver;
+use vanolst\Images\ImageSaver;
 
 class ProjectsController extends \BaseController {
 
