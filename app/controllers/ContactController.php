@@ -27,8 +27,8 @@ class ContactController extends \BaseController {
 		if ($validator->fails()) return Redirect::back()->withInput()->withErrors($validator->messages());
 		
 
-		Mail::send('emails.contactform', $data, function($message) use ($data){
-			$message->to('michaeltje@live.nl')->subject('Contactform');
+		Mail::queue('emails.contactform', $data, function($message) use ($data){
+			$message->to(getenv('EMAIL_ADRESS'))->subject('Contactform');
 		});
 
 		return Redirect::route('home')->with('mail_message', 'Thanks for sending me an email!');
