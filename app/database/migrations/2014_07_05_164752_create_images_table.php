@@ -14,10 +14,17 @@ class CreateImagesTable extends Migration {
 	{
 		 Schema::create('images', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('projects_id');
+            $table->integer('projects_id')->nullable()->unsigned();
             $table->string('image');
 			$table->timestamps();
-        });
+	    });
+		 
+		Schema::table('images', function($table) {
+    		$table->foreign('projects_id')
+	    		->references('id')
+	    		->on('projects')
+	    		->onDelete('cascade');
+ 		});
 	}
 
 	/**

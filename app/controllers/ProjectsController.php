@@ -1,15 +1,15 @@
 <?php
 
-use \vanolst\Images\Images as Images;
+use \vanolst\Images\ImageSaver;
 
 class ProjectsController extends \BaseController {
 
-	protected $images;
+	protected $imageSaver;
 
-	public function __construct(Images $images)
+	public function __construct(ImageSaver $imageSaver)
 	{
 		$this->beforeFilter('csrf', array('on' => 'post'));
-		$this->images = $images;
+		$this->imageSaver = $imageSaver;
 	}
 
 	/**
@@ -19,7 +19,7 @@ class ProjectsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$projects = Projects::with('images')->get(); 
+		$projects = Projects::with('images')->first(); 
 
         return View::make('projects.index')->with('projects', $projects);
 	}
@@ -45,19 +45,19 @@ class ProjectsController extends \BaseController {
 	{	
 		$images = Input::file('images');
 		try{
-			$this->images->saveImages($images, path());
+			$this->imageSaver->saveImages($images, path() );
 		} catch(Exception $e){
-			return $e->getMessage();
+			
 		}
 
 		Projects::create([
 			'title' 		=> Input::get('title'),
 			'thumb' 		=> $images[0]->getClientOriginalName(),
 			'description' 	=> Input::get('description'),
-			'slug' 			=> createSlug(Input::get('slug')),
+			'slug' 			=> Str::slug(Input::get('slug')),
 			'link'			=> Input::get('link'),
 			'skills'		=> get_all_skills(Input::get('skills'))
-		])->images()->saveMany($this->images->store());
+		])->images()->saveMany($this->imageSaver->store());
 
 		return Redirect::route('admin.project.create');
 	}
@@ -71,7 +71,7 @@ class ProjectsController extends \BaseController {
 	public function show($slug)
 	{
 	  
-	 	$project = Projects::with('images')->whereSlug($slug)->first();
+	 	$project = Projects::with('images')->whereSlug($slug)->get();
 
 		if (!$project){
 			return Redirect::route('projects.index')->with('flash_message_wrong', 'Project doesn\'t exists !');
@@ -103,7 +103,7 @@ class ProjectsController extends \BaseController {
 	{
 		$images = Input::file('images');
 		try{
-			$this->images->saveImages($images, path());
+			$this->imageSaver->saveImages($images, path());
 		} catch(Exception $e){
 			return $e->getMessage();
 		}
@@ -112,7 +112,7 @@ class ProjectsController extends \BaseController {
 		$project->title 		= Input::get('title');
 		$project->thumb 		= $images[0]->getClientOriginalName();
 		$project->description 	= Input::get('description');
-		$project->slug 			= createSlug(Input::get('slug'));
+		$project->slug 			= Str::slug(Input::get('slug'));
 		$project->link 			= Input::get('link');
 		$project->skills 		= get_all_skills(Input::get('skills'));
 		$project->save();

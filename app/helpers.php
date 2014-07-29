@@ -23,18 +23,3 @@ function get_all_skills($skills)
 
 	return false;
 }
-
-function createSlug($slug)
-{
-	$alltypes = '/[^\-\s\pN\pL]+/u';
-	$spaces = '/[\-\s]+/';
-
-	$slug = preg_replace($alltypes, '' , mb_strtolower($slug, 'UTF-8'));
-	$slug = preg_replace($spaces, '-', $slug);
-	$slug = trim($slug, '-');
-
-	return $slug;
-}
-
-
- ?>

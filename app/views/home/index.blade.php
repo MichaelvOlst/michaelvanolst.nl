@@ -14,7 +14,7 @@
 					
  					<article class="wow fadeInUp animated">
 						<a href="{{ URL::route('projects.show', $project->slug) }}">
-	 						<figure><img src="/../uploads/thumb/{{ $project->thumb }}" alt="{{ $project->title }}"></figure>
+	 						<figure><img src="/../uploads/{{ $project->thumb }}" alt="{{ $project->title }}"></figure>
 	 						<section class="description">
 	 							<h2>{{ $project->title }}</h2>
 	 						</section>
