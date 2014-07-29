@@ -27,7 +27,7 @@ class ContactController extends \BaseController {
 		if ($validator->fails()) return Redirect::back()->withInput()->withErrors($validator->messages());
 		
 
-		Mail::queue('emails.contactform', $data, function($message) use ($data){
+		Mail::send('emails.contactform', $data, function($message) use ($data){
 			$message->to('michaeltje@live.nl')->subject('Contactform');
 		});
 
