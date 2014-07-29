@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => 465,
+	'port' => 587,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => getenv('EMAIL_ADDRESS'), 'name' => 'Michael van Olst'),
+	'from' => array('address' => 'michaelvolst@gmail.com', 'name' => 'Michael van Olst'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'encryption' => 'ssl',
+	'encryption' => 'tls',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => getenv('EMAIL_ADDRESS'),
+	'username' => 'michaelvolst@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => getenv('EMAIL_PASSWORD'),
+	'password' => 'Ekkdwd41',
 
 	/*
 	|--------------------------------------------------------------------------
