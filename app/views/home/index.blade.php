@@ -6,9 +6,6 @@
 	 	<h2>Recent projects</h2>
 	 
 		<div class="projects">
-
-
-
 			@if($projects )
 				@foreach($projects as $project)
 					
@@ -19,8 +16,7 @@
 	 							<h2>{{ $project->title }}</h2>
 	 						</section>
 						</a>	
-					</article>
-		       		 			
+					</article> 			
 				@endforeach
 			@endif
 		</div>

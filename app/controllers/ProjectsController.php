@@ -19,7 +19,7 @@ class ProjectsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$projects = Projects::with('images')->first(); 
+		$projects = Projects::with('images')->get(); 
 
         return View::make('projects.index')->with('projects', $projects);
 	}
