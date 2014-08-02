@@ -28,7 +28,7 @@ class ContactController extends \BaseController {
 		
 
 		Mail::queue('emails.contactform', $data, function($message) use ($data){
-			$message->to(getenv("EMAIL_ADDRESS"))->subject('Contactform');
+			$message->to(getenv('EMAIL_ADDRESS'))->subject('Contactform');
 		});
 
 		return Redirect::route('home')->with('mail_message', 'Thanks for sending me an email!');
