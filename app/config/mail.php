@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'Michael van Olst, 'name' => 'www.michaelvanolst.nl'),
+	'from' => array('address' => 'Michael van Olst', 'name' => 'www.michaelvanolst.nl'),
 
 	/*
 	|--------------------------------------------------------------------------
