@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'info@michaelvanolst.nl', 'name' => 'Michael van Olst'),	
+	'from' => array('address' => 'michaelvolst@gmail.com', 'name' => 'Michael van Olst'),	
 
 	/*
 	|--------------------------------------------------------------------------
