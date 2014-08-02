@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => getenv('EMAIL_ADDRESS'),
+	'username' => getenv("EMAIL_ADDRESS"),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => getenv('EMAIL_PASSWORD'),
+	'password' => getenv("EMAIL_PASSWORD"),
 
 	/*
 	|--------------------------------------------------------------------------
