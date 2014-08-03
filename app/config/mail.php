@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => getenv("EMAIL_ADDRESS"), 'name' => "michaelvolst@gmail.com"),	
+	'from' => array('address' => "info@michaelvanolst.nl", 'name' => "michaelvolst@gmail.com"),	
 
 	/*
 	|--------------------------------------------------------------------------
