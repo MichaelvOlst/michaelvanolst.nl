@@ -31,7 +31,7 @@ class ContactController extends \BaseController {
 			$message->to('michaelvolst@gmail.com')->subject('Contactform');
 		});
 
-		return Redirect::route('home')->with('mail_message', 'Thanks for sending me an email!');
+		return Redirect::route('home')->with('message', 'Thanks for sending me an email!');
 
 	}
 

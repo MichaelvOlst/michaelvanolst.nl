@@ -8,6 +8,8 @@
 	{{ HTML::style('assets/stylesheets/styles.css') }}
  	{{ HTML::script('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js') }}
 <body id="form-only">
+
+	@include('layouts.includes.flash')
 	<div class="login">	
 		<section class="container" role="mainsection">
 			<section class="loginform">

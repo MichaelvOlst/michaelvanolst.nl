@@ -25,7 +25,7 @@
 body{
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
-	background: #F3F3F3;
+	background: $white;
 	color: $darkgray;
 	z-index: 2;
 	
@@ -51,6 +51,12 @@ div.about, div.contact, div.projects{
 	@include translate3d(0, 0 ,0);
 }
 
+//add background colors
+
+.projects-background{
+	background-color: $lightcyanblue;
+}
+
  //layout setting
 
 div.layout{
@@ -60,12 +66,27 @@ div.layout{
 	padding: 10px 0;
 	position: relative;
 	
-	h2{
+	.section-header{
+		margin-top: 2%;
+		display: block;
+		float: left;
+		margin-right: 3.66764%;
+		width: 100%;
+		margin-right: 0;
 		text-align: center;
-		margin: 2% 5%;
-		font-size: 1.5rem;
-		color: $lightblue;
-	}	
+		margin-bottom: 1.65em;
+		h2 {
+			text-transform: uppercase;
+			font-size: 14px;
+			font-size: 0.7rem;
+			font-weight: bold;
+			border-bottom: 2px solid #eeeeee;
+			display: inline-block;
+			padding: 0 0.5em 0.25em;
+			text-align: center;
+		}
+	}
+		
 }
 
 @import "partials/flash";

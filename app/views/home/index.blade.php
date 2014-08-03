@@ -1,14 +1,15 @@
 @extends('layouts.main')
 
 	@section('content')
-	@include('layouts.banner')
+	@include('layouts.includes.banner')
 	<div class="layout">
-	 	<h2>Recent projects</h2>
+		<div class="section-header">
+		 	<h2>Recent projects</h2>
+		</div>
 	 
 		<div class="projects">
 			@if($projects )
 				@foreach($projects as $project)
-					
  					<article class="wow fadeInUp animated">
 						<a href="{{ URL::route('projects.show', $project->slug) }}">
 	 						<figure><img src="/../uploads/{{ $project->thumb }}" alt="{{ $project->title }}"></figure>
@@ -21,7 +22,4 @@
 			@endif
 		</div>
 	</div>
-
-	@stop
-	
-
+@stop

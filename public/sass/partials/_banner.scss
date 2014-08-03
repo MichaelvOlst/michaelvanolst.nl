@@ -1,15 +1,13 @@
 div.banner{	
-	background: url('../images/ocean.jpg') no-repeat 50%;
 	background-size: cover;
-	background-color: $verydarkgray;
+	background-color: $cyanblue;
 	width: 100%;	
 	position: relative;
-	min-height: 600px;
-	border-bottom: 1px solid $verydarkgray;
+	min-height: 700px;
 	
 	div.intro{
 		background-color: transparent;
-	    margin: 20% auto 11%;
+	    margin: 15% auto 11%;
 	    position: relative;
 	    text-align: center;
 	    width: 100%;
@@ -20,14 +18,15 @@ div.banner{
 	    }
 
 		h1{
-			margin: 30px auto;
-			padding-bottom: 15%;
+			margin: 0 auto;
+			padding-bottom: 5%;
 			line-height: 5rem;
-			width: 100%;
+			width: 70%;
 			color: $white;
-			font-size: 4rem;
-			font-weight: 600;
-			//font-style: italic;
+			font-size: 2.5rem;
+			line-height: 1.5em;
+			font-weight: 100;
+			font-style: italic;
 			font-family: 'Open Sans', sans-serif;
 		}
 

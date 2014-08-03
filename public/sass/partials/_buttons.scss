@@ -38,7 +38,7 @@
 	border-radius: 5px;
 	&:hover{
 		
-		color: white;
+		color: $white;
 
 		&:after{
 			width: 100%;
@@ -51,7 +51,7 @@
 		top: 0;
 		left: 0;
 		opacity: .4;
-		background: $mediumdarkblue;
+		background: $white;
 		content: '';
 		position: absolute;
 		z-index: -1;

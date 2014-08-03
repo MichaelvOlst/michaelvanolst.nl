@@ -1,31 +1,14 @@
 div.flash-message{ 
-	position: relative;
-	left: 0;
-	top: 50px;
-	min-height: 50px;
-	width: 100%;
-	padding: 20px 5%;
+	position: fixed;
+	right: 5%;
+	z-index: 1000;
+	bottom: 50px;
+	min-height: 100px;
+	width: 20%;
+	padding: 3% 0;
 	text-align: center;
+	@include border-radius(5px);
 	font-size: 1.5rem;
-}
-
-.wrong{
-	background: $lightred;
 	color: $white;
-}
-
-.good{
-	background: $green;
-	color: $verydarkgray;
-}
-
-.mail{
-	background: $darkgreen;
-	color: $white;	
-}
-
-.normal{
-	background: $gray;
-	color: $white;
-	@include box-shadow(inset 0 0 5px $lightgray);
+	background-color: rgba(#3D4C54, 0.6);
 }

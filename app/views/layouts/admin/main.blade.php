@@ -10,17 +10,11 @@
 
  	{{ HTML::script('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js') }}
 <body id="body">
-	
-	@if (Session::has('flash_message') )
-   		<div class="flash-message normal">
-   			{{ Session::get('flash_message') }}
-    	</div>
-    @endif
 
+	@include('layouts.includes.flash')
 
     @include('layouts.admin.nav')
  
-
 	<section class="container" role="mainsection">
 		@yield('content')
 	</section>

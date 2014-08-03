@@ -14,7 +14,7 @@ class LoginController extends \BaseController {
 	 */
 	public function index()
 	{
-		if (Auth::check()) return Redirect::route('admin')->with('flash_message', 'you are already logged in');
+		if (Auth::check()) return Redirect::route('admin')->with('message', 'you are already logged in');
 		return View::make('login.index');
 	}
 
@@ -40,42 +40,9 @@ class LoginController extends \BaseController {
 			'password' 	=> Input::get('password')
 		]);
 
-		if($attempt) return Redirect::route('admin')->with('flash_message', 'You are logged in!');
+		if($attempt) return Redirect::route('admin')->with('message', 'You are logged in!');
 
-		return Redirect::back()->with('flash_message', 'invalid credentials')->withInput();
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
+		return Redirect::back()->with('message', 'invalid credentials')->withInput();
 	}
 
 	/**
@@ -88,7 +55,7 @@ class LoginController extends \BaseController {
 	{
 		Auth::logout();
 
-		return Redirect::route('home')->with('flash_message', 'You have been logged out');
+		return Redirect::route('home')->with('message', 'You have been logged out');
 	}
 
 }
