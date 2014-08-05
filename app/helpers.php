@@ -7,7 +7,7 @@ function set_active($path, $active = 'active')
 
 function background_active()
 {
-	return Request::path() ?: '';
+	return Request::segment(1) ?: '';
 }
 
 function path()

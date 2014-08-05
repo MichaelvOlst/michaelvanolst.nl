@@ -67,7 +67,7 @@ div.contact {
 			}
 
 			input[type="submit"]{
-				background-color: $lightblue;
+				background-color: $cyanblue;
 				width: 100%;
 				height: 50px;
 				margin-top: 40px;
@@ -79,7 +79,7 @@ div.contact {
 				border: none;
 
 				&:hover, &:focus{
-					background-color: $mediumdarkblue;
+					background-color: $cyanblue;
 					color: $white;
 					@include box-shadow(none);
 				}

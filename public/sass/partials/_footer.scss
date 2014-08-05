@@ -3,6 +3,7 @@ footer{
 	min-height: 100px;
 	background-color: #1E343F;
 	overflow: hidden;
+	border-top: 1px solid $darkgray;
 	margin-top: 100px;
 	@include transition (all 200ms ease);
 
