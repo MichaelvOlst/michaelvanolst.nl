@@ -13,3 +13,5 @@ Vagrantfile
 *uploads
 /public/uploads/*
 /public/sass/*
+app/local/app.php
+app/local/start.php
