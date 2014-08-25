@@ -26,6 +26,10 @@ header {
 				font-size: 1.8rem;
 				left: 5%;
 			}
+			@media screen and (max-width: $tablet){
+				font-size: 1.8rem;
+				left: 5%;
+			}
 		} // h1.brand
 
 		.menu-toggle{
@@ -37,6 +41,9 @@ header {
 			top: 9px;
 			cursor: pointer;
 			@media screen and (max-width: $mobile){
+				right: 5%;
+			}
+			@media screen and (max-width: $tablet){
 				right: 5%;
 			}
 		} // menu-toggle	

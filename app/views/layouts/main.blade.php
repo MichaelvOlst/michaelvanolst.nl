@@ -13,7 +13,7 @@
  		new WOW().init();
 	</script>
 </head>
-<body id="body" class="{{ background_active() }}-background">
+<body id="body" class="{{ background_active() ?: 'home'}}-background">
 
     @include('layouts.includes.flash')
 

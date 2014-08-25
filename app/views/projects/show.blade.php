@@ -1,39 +1,39 @@
 @extends('layouts.main')
 
 	@section('content')
-	<div class="layout">
+	
 		<article class="singleprojects cf">
 
-		 	<figure id="slideshow">
-		 		@foreach ( $project->images as $images)
-		 			<img src="/../uploads/{{ $images->image }}" alt="{{ $project->title}}">
-		 		@endforeach
-		 	</figure>
-		 	<div class="control">
-			 	<div id="prev"><i class="fa fa-caret-left"></i></div>
-			 	<div id="next"><i class="fa fa-caret-right"></i></div>
-		 	</div>
-		 	<div class="text cf">
-			 	<div class="description cf">
+		 	<section class="work-bio">
+			 	<article class="description">
 			 		<h1>{{ $project->title }}</h1>
 			 		<p>{{ $project->description }}</p>	
-			 		<a href="//{{$project->link}}" target="_blank" class="button blue">View site</a>
-			 	</div>
-		 		<div class="build cf">
+			 	</article>
+		 		<article class="build">
 		 			<h2>Build with:</h2>
 		 			<ul>
 		 				@foreach ( explode(',',$project->skills) as $skill)
 							<li>{{ $skill }}</li>
 		 				@endforeach
-						
-		 			</ul>
-		 		</div>
-		 	</div>
+ 					</ul>
+		 		</article>
+		 		<a class="fa fa-long-arrow-left button" href="{{URL::route('projects.index')}}"> back</a>
+			 	<a href="//{{$project->link}}" target="_blank" class="button ">View site</a>
+		 	</section>
+		 	
+		 	 <section id="pictures">
+		 	 	<ul>
+			 		@foreach ( $project->images as $images)
+			 			<li><img src="/../uploads/{{ $images->image }}" alt="{{ $project->title}}"></li>
+			 		@endforeach
+		 		</ul>
+		 	</section>
 
-		 	<a class="fa fa-long-arrow-left button blue" href="{{URL::route('projects.index')}}"> back</a>
+		 	
 
  		</article>
-	</div>
+ 		
+ 		
 	@stop
 
 	@section('scripts')

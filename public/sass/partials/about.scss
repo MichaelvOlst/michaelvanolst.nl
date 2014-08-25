@@ -22,7 +22,7 @@ div.about{
 		&:after{
 			content: ' ';
 			width: 2em;
-			border-bottom: 3px solid $lightcyanblue;
+			border-bottom: 3px solid $white;
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -126,7 +126,7 @@ div.about{
 			margin-bottom: 20px;
 			overflow: hidden;
 			box-shadow: 0 0 1px $darkblue inset;
-			background-color: $lightcyanblue;
+			background-color: $white;
 
 			span{
 				float: left;

@@ -2,13 +2,13 @@
 
 	@section('content')
 	@include('layouts.includes.banner')
-	<div class="layout">
-		<div class="section-header">
-		 	<h2>Recent projects</h2>
-		</div>
-	 
-		<div class="projects">
-			@if($projects )
+	<div class="projects">
+		<div class="layout">
+			<div class="section-header">
+			 	<h2>Recent projects</h2>
+			</div>
+		 
+ 			@if($projects )
 				@foreach($projects as $project)
  					<article class="wow fadeInUp animated">
 						<a href="{{ URL::route('projects.show', $project->slug) }}">

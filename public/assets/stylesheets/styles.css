@@ -146,7 +146,12 @@ body a {
   background-color: #1e343f;
 }
 
-/* line 62, ../../sass/_layout.scss */
+/* line 60, ../../sass/_layout.scss */
+.home-background {
+  background-color: white;
+}
+
+/* line 66, ../../sass/_layout.scss */
 div.layout {
   max-width: 1200px;
   margin: 0 auto;
@@ -154,7 +159,7 @@ div.layout {
   padding: 10px 0;
   position: relative;
 }
-/* line 69, ../../sass/_layout.scss */
+/* line 73, ../../sass/_layout.scss */
 div.layout .section-header {
   margin-top: 2%;
   display: block;
@@ -163,9 +168,9 @@ div.layout .section-header {
   width: 100%;
   margin-right: 0;
   text-align: center;
-  margin-bottom: 1.65em;
+  margin-bottom: 5%;
 }
-/* line 78, ../../sass/_layout.scss */
+/* line 82, ../../sass/_layout.scss */
 div.layout .section-header h2 {
   text-transform: uppercase;
   font-size: 14px;
@@ -215,11 +220,11 @@ div.flash-message {
 }
 
 /* line 14, ../../sass/partials/_buttons.scss */
-.gray {
-  background: #d9e6d5;
+.white {
+  background: white;
 }
 /* line 17, ../../sass/partials/_buttons.scss */
-.gray:before {
+.white:before {
   content: " ";
   border-bottom: 2px solid #41595c;
   position: absolute;
@@ -233,11 +238,11 @@ div.flash-message {
   transition: all 0.35s;
 }
 /* line 28, ../../sass/partials/_buttons.scss */
-.gray:hover {
-  background: #d9e6d5;
+.white:hover {
+  background: white;
 }
 /* line 31, ../../sass/partials/_buttons.scss */
-.gray:hover:before {
+.white:hover:before {
   content: " ";
   border-bottom: 2px solid #41595c;
   position: absolute;
@@ -449,7 +454,14 @@ header h1.brand a:hover {
     left: 5%;
   }
 }
-/* line 31, ../../sass/partials/_header.scss */
+@media screen and (max-width: 1000px) {
+  /* line 12, ../../sass/partials/_header.scss */
+  header h1.brand a {
+    font-size: 1.8rem;
+    left: 5%;
+  }
+}
+/* line 35, ../../sass/partials/_header.scss */
 header .menu-toggle {
   text-decoration: none;
   color: #0c1a2c;
@@ -460,7 +472,13 @@ header .menu-toggle {
   cursor: pointer;
 }
 @media screen and (max-width: 800px) {
-  /* line 31, ../../sass/partials/_header.scss */
+  /* line 35, ../../sass/partials/_header.scss */
+  header .menu-toggle {
+    right: 5%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  /* line 35, ../../sass/partials/_header.scss */
   header .menu-toggle {
     right: 5%;
   }
@@ -472,7 +490,7 @@ div.banner {
   background-color: #96c1ae;
   width: 100%;
   position: relative;
-  min-height: 700px;
+  z-index: 100;
 }
 /* line 8, ../../sass/partials/_banner.scss */
 div.banner div.intro {
@@ -491,10 +509,11 @@ div.banner div.intro {
 @media screen and (max-width: 800px) {
   /* line 8, ../../sass/partials/_banner.scss */
   div.banner div.intro {
+    padding-top: 10%;
     width: 90%;
   }
 }
-/* line 20, ../../sass/partials/_banner.scss */
+/* line 21, ../../sass/partials/_banner.scss */
 div.banner div.intro h1 {
   margin: 0 auto;
   padding-bottom: 5%;
@@ -507,18 +526,18 @@ div.banner div.intro h1 {
   font-style: italic;
   font-family: 'Open Sans', sans-serif;
 }
-/* line 33, ../../sass/partials/_banner.scss */
+/* line 34, ../../sass/partials/_banner.scss */
 div.banner div.intro .button {
   width: 50%;
 }
 @media screen and (max-width: 800px) {
-  /* line 33, ../../sass/partials/_banner.scss */
+  /* line 34, ../../sass/partials/_banner.scss */
   div.banner div.intro .button {
     width: auto;
   }
 }
 
-/* line 103, ../../sass/_layout.scss */
+/* line 107, ../../sass/_layout.scss */
 section.container {
   width: 100%;
   overflow: hidden;
@@ -533,8 +552,10 @@ section.container {
 /* line 1, ../../sass/partials/projects.scss */
 div.projects {
   font-size: 0;
+  width: 100%;
   margin-top: 5%;
   position: relative;
+  z-index: 101;
 }
 @media screen and (max-width: 800px) {
   /* line 1, ../../sass/partials/projects.scss */
@@ -543,7 +564,7 @@ div.projects {
     padding: 0 5% 5% 5%;
   }
 }
-/* line 15, ../../sass/partials/projects.scss */
+/* line 17, ../../sass/partials/projects.scss */
 div.projects article {
   overflow: hidden;
   width: 33.33333%;
@@ -554,20 +575,21 @@ div.projects article {
   font-size: 0;
 }
 @media screen and (max-width: 800px) {
-  /* line 15, ../../sass/partials/projects.scss */
+  /* line 17, ../../sass/partials/projects.scss */
   div.projects article {
     display: block;
     width: 100%;
     margin: 5% auto;
-    background-color: white;
+    background-color: #f0f0f0;
     padding: 5%;
     height: auto;
-    -webkit-box-shadow: 0 3px 3px #bdb8b8;
-    -moz-box-shadow: 0 3px 3px #bdb8b8;
-    box-shadow: 0 3px 3px #bdb8b8;
+    border-bottom: 2px solid #bdb8b8;
+    -webkit-box-shadow: 0 0 3px #bdb8b8;
+    -moz-box-shadow: 0 0 3px #bdb8b8;
+    box-shadow: 0 0 3px #bdb8b8;
   }
 }
-/* line 35, ../../sass/partials/projects.scss */
+/* line 38, ../../sass/partials/projects.scss */
 div.projects article:hover img {
   opacity: 0.5;
   -webkit-transform: scale(1);
@@ -577,7 +599,7 @@ div.projects article:hover img {
   transform: scale(1);
 }
 @media screen and (max-width: 800px) {
-  /* line 35, ../../sass/partials/projects.scss */
+  /* line 38, ../../sass/partials/projects.scss */
   div.projects article:hover img {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -587,11 +609,11 @@ div.projects article:hover img {
     opacity: 1;
   }
 }
-/* line 44, ../../sass/partials/projects.scss */
+/* line 47, ../../sass/partials/projects.scss */
 div.projects article:hover section.description {
   opacity: 1;
 }
-/* line 46, ../../sass/partials/projects.scss */
+/* line 49, ../../sass/partials/projects.scss */
 div.projects article:hover section.description:before {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
@@ -599,7 +621,7 @@ div.projects article:hover section.description:before {
   -o-transform: scale(1);
   transform: scale(1);
 }
-/* line 52, ../../sass/partials/projects.scss */
+/* line 55, ../../sass/partials/projects.scss */
 div.projects article section.description {
   color: white;
   position: absolute;
@@ -610,17 +632,12 @@ div.projects article section.description {
   width: 100%;
   box-sizing: border-box;
   opacity: 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
 }
-/* line 65, ../../sass/partials/projects.scss */
+/* line 67, ../../sass/partials/projects.scss */
 div.projects article section.description:before {
   position: absolute;
   top: 30px;
@@ -639,7 +656,7 @@ div.projects article section.description:before {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 79, ../../sass/partials/projects.scss */
+/* line 81, ../../sass/partials/projects.scss */
 div.projects article section.description h2 {
   font-size: 1.5rem;
   text-align: center;
@@ -650,7 +667,7 @@ div.projects article section.description h2 {
   padding-left: 0;
 }
 @media screen and (max-width: 800px) {
-  /* line 79, ../../sass/partials/projects.scss */
+  /* line 81, ../../sass/partials/projects.scss */
   div.projects article section.description h2 {
     margin: 4% auto 0;
     padding-top: 0;
@@ -658,21 +675,21 @@ div.projects article section.description h2 {
     font-size: 2rem;
   }
 }
-/* line 95, ../../sass/partials/projects.scss */
+/* line 97, ../../sass/partials/projects.scss */
 div.projects article section.description p {
   line-height: 1.5rem;
   font-size: 1.5rem;
   padding-left: 6%;
 }
 @media screen and (max-width: 800px) {
-  /* line 95, ../../sass/partials/projects.scss */
+  /* line 97, ../../sass/partials/projects.scss */
   div.projects article section.description p {
     font-size: 1rem;
     line-height: 1rem;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 52, ../../sass/partials/projects.scss */
+  /* line 55, ../../sass/partials/projects.scss */
   div.projects article section.description {
     position: relative;
     display: block;
@@ -697,7 +714,7 @@ div.projects article section.description p {
     -o-transform: scale(1);
     transform: scale(1);
   }
-  /* line 123, ../../sass/partials/projects.scss */
+  /* line 125, ../../sass/partials/projects.scss */
   div.projects article section.description:before {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -708,7 +725,7 @@ div.projects article section.description p {
     border: none;
   }
 }
-/* line 131, ../../sass/partials/projects.scss */
+/* line 133, ../../sass/partials/projects.scss */
 div.projects article img {
   height: 100%;
   width: 100%;
@@ -727,7 +744,7 @@ div.projects article img {
   transform: scale(1.12);
 }
 @media screen and (max-width: 800px) {
-  /* line 131, ../../sass/partials/projects.scss */
+  /* line 133, ../../sass/partials/projects.scss */
   div.projects article img {
     height: 75%;
     max-height: 300px;
@@ -741,187 +758,140 @@ div.projects article img {
 
 /* line 1, ../../sass/partials/singleproject.scss */
 .singleprojects {
-  margin: 10% auto -5%;
+  margin: 10% auto;
+  width: 90%;
 }
-@media screen and (max-width: 1000px) {
-  /* line 1, ../../sass/partials/singleproject.scss */
-  .singleprojects {
-    width: 90%;
-  }
-}
-/* line 7, ../../sass/partials/singleproject.scss */
-.singleprojects a {
-  font-size: 1.3rem;
-  position: relative;
-  top: -120px;
-  width: 10%;
-}
-@media screen and (max-width: 1000px) {
-  /* line 7, ../../sass/partials/singleproject.scss */
-  .singleprojects a {
-    width: auto;
-    top: -110px;
-  }
-}
-@media screen and (max-width: 800px) {
-  /* line 7, ../../sass/partials/singleproject.scss */
-  .singleprojects a {
-    width: auto;
-    top: -50px;
-  }
-}
-/* line 24, ../../sass/partials/singleproject.scss */
-.singleprojects #slideshow {
-  width: 100% !important;
-  margin: 0 auto;
-}
-/* line 28, ../../sass/partials/singleproject.scss */
-.singleprojects #slideshow img {
-  width: 100%;
-  height: 500px;
-}
-@media screen and (max-width: 1000px) {
-  /* line 28, ../../sass/partials/singleproject.scss */
-  .singleprojects #slideshow img {
-    height: 300px;
-  }
-}
-/* line 37, ../../sass/partials/singleproject.scss */
-.singleprojects .control {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-/* line 42, ../../sass/partials/singleproject.scss */
-.singleprojects .control #prev, .singleprojects .control #next {
-  font-size: 3rem;
-  display: inline-block;
-  position: absolute;
-  cursor: pointer;
-}
-/* line 48, ../../sass/partials/singleproject.scss */
-.singleprojects .control #prev {
-  left: 0;
-}
-/* line 51, ../../sass/partials/singleproject.scss */
-.singleprojects .control #next {
-  right: 0;
-}
-/* line 56, ../../sass/partials/singleproject.scss */
-.singleprojects .text {
-  width: 100%;
+/* line 5, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio {
+  width: 30%;
   min-height: 500px;
-  margin: 10% auto 15%;
-}
-/* line 61, ../../sass/partials/singleproject.scss */
-.singleprojects .text .description {
   float: left;
-  width: 60%;
-  height: 100%;
-  background: white;
-  margin-bottom: 5%;
-  -webkit-box-shadow: 0 3px 3px #bdb8b8;
-  -moz-box-shadow: 0 3px 3px #bdb8b8;
-  box-shadow: 0 3px 3px #bdb8b8;
 }
 @media screen and (max-width: 800px) {
-  /* line 61, ../../sass/partials/singleproject.scss */
-  .singleprojects .text .description {
+  /* line 5, ../../sass/partials/singleproject.scss */
+  .singleprojects .work-bio {
     width: 100%;
     display: block;
     float: none;
+    z-index: -1;
+    margin-bottom: 10%;
+    position: relative;
   }
 }
-/* line 74, ../../sass/partials/singleproject.scss */
-.singleprojects .text .description h1 {
+/* line 18, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .button {
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #1e343f;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+}
+/* line 28, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .description {
+  width: 100%;
+}
+/* line 32, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .description h1 {
   font-size: 2.5rem;
   position: relative;
   color: #4e9fe9;
-  text-align: center;
   margin-bottom: 10%;
   line-height: 1.7em;
+  border-bottom: 5px solid #41595c;
 }
-/* line 82, ../../sass/partials/singleproject.scss */
-.singleprojects .text .description p {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  margin: 0 auto;
-  text-align: center;
-  width: 80%;
-}
-/* line 90, ../../sass/partials/singleproject.scss */
-.singleprojects .text .description .button {
-  text-align: center;
-  margin: 8rem 10% 0;
-  left: 0;
-  padding: 1% 10%;
-  width: 80%;
-  top: -60px;
-  color: #fff;
-}
-/* line 101, ../../sass/partials/singleproject.scss */
-.singleprojects .text .build {
-  width: 30%;
-  float: right;
-  min-height: 200px;
-  padding-bottom: 5%;
-  background: white;
-  -webkit-box-shadow: 0 3px 3px #bdb8b8;
-  -moz-box-shadow: 0 3px 3px #bdb8b8;
-  box-shadow: 0 3px 3px #bdb8b8;
+/* line 40, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .description p {
+  font-size: 1rem;
+  line-height: 2rem;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 @media screen and (max-width: 1000px) {
-  /* line 101, ../../sass/partials/singleproject.scss */
-  .singleprojects .text .build {
-    width: 35%;
+  /* line 51, ../../sass/partials/singleproject.scss */
+  .singleprojects .work-bio .build {
+    width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 101, ../../sass/partials/singleproject.scss */
-  .singleprojects .text .build {
+  /* line 51, ../../sass/partials/singleproject.scss */
+  .singleprojects .work-bio .build {
     float: none;
     width: 100%;
     padding-bottom: 5%;
+    z-index: -1;
   }
 }
-/* line 117, ../../sass/partials/singleproject.scss */
-.singleprojects .text .build h2 {
-  margin: 0;
+/* line 62, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .build h2 {
   color: #4e9fe9;
   line-height: 2em;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10%;
-  text-align: center;
+  display: block;
 }
 @media screen and (max-width: 800px) {
-  /* line 117, ../../sass/partials/singleproject.scss */
-  .singleprojects .text .build h2 {
+  /* line 62, ../../sass/partials/singleproject.scss */
+  .singleprojects .work-bio .build h2 {
     margin-bottom: 5%;
   }
 }
-/* line 130, ../../sass/partials/singleproject.scss */
-.singleprojects .text .build ul {
-  text-align: center;
+/* line 74, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .build ul {
+  list-style-type: none;
 }
 @media screen and (max-width: 800px) {
-  /* line 130, ../../sass/partials/singleproject.scss */
-  .singleprojects .text .build ul {
-    width: 60%;
+  /* line 74, ../../sass/partials/singleproject.scss */
+  .singleprojects .work-bio .build ul {
+    width: 100%;
     padding: 0;
     margin: 0 auto;
   }
 }
-/* line 138, ../../sass/partials/singleproject.scss */
-.singleprojects .text .build ul li {
-  font-size: 1.5rem;
+/* line 82, ../../sass/partials/singleproject.scss */
+.singleprojects .work-bio .build ul li {
+  font-size: 1.2rem;
   line-height: 2.5rem;
+  display: inline-block;
+  margin-right: 10%;
+  z-index: 999;
 }
 @media screen and (max-width: 800px) {
-  /* line 138, ../../sass/partials/singleproject.scss */
-  .singleprojects .text .build ul li {
+  /* line 82, ../../sass/partials/singleproject.scss */
+  .singleprojects .work-bio .build ul li {
     display: inline-block;
-    width: 49%;
+    margin-right: 15%;
   }
+}
+/* line 99, ../../sass/partials/singleproject.scss */
+.singleprojects #pictures {
+  width: 60%;
+  float: right;
+  background-color: #e2e2e2;
+}
+@media screen and (max-width: 800px) {
+  /* line 99, ../../sass/partials/singleproject.scss */
+  .singleprojects #pictures {
+    width: 100%;
+    display: block;
+    float: none;
+    z-index: 999;
+    position: relative;
+  }
+}
+/* line 111, ../../sass/partials/singleproject.scss */
+.singleprojects #pictures li {
+  border-bottom: 10px solid #e2e2e2;
+}
+/* line 114, ../../sass/partials/singleproject.scss */
+.singleprojects #pictures li img {
+  width: 100%;
 }
 
 /* line 3, ../../sass/partials/about.scss */
@@ -952,7 +922,7 @@ div.about .info h1 {
 div.about .info h1:after {
   content: ' ';
   width: 2em;
-  border-bottom: 3px solid #d9e6d5;
+  border-bottom: 3px solid white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1082,7 +1052,7 @@ div.about .skills-holder .skills .bar {
   margin-bottom: 20px;
   overflow: hidden;
   box-shadow: 0 0 1px #0c1a2c inset;
-  background-color: #d9e6d5;
+  background-color: white;
 }
 /* line 131, ../../sass/partials/about.scss */
 div.about .skills-holder .skills .bar span {
@@ -1114,6 +1084,7 @@ div.contact h1 {
   width: 60%;
   margin: 5% auto;
   line-height: 3rem;
+  color: white;
 }
 @media screen and (max-width: 1000px) {
   /* line 13, ../../sass/partials/contact.scss */
@@ -1121,20 +1092,20 @@ div.contact h1 {
     width: 90%;
   }
 }
-/* line 24, ../../sass/partials/contact.scss */
+/* line 25, ../../sass/partials/contact.scss */
 div.contact .form {
   width: 60%;
   margin: 0 auto 10%;
 }
 @media screen and (max-width: 1000px) {
-  /* line 24, ../../sass/partials/contact.scss */
+  /* line 25, ../../sass/partials/contact.scss */
   div.contact .form {
     width: 90%;
   }
 }
-/* line 32, ../../sass/partials/contact.scss */
+/* line 33, ../../sass/partials/contact.scss */
 div.contact .form .formgroup {
-  margin-bottom: 15px;
+  margin: -3px;
 }
 /* line 35, ../../sass/partials/contact.scss */
 div.contact .form .formgroup label {
@@ -1178,7 +1149,6 @@ div.contact .form .formgroup input[type="submit"] {
   background-color: #96c1ae;
   width: 100%;
   height: 50px;
-  margin-top: 40px;
   -webkit-appearance: none;
   -moz-appearance: none;
   font-size: 1.2rem;
@@ -1186,7 +1156,7 @@ div.contact .form .formgroup input[type="submit"] {
   color: white;
   border: none;
 }
-/* line 81, ../../sass/partials/contact.scss */
+/* line 80, ../../sass/partials/contact.scss */
 div.contact .form .formgroup input[type="submit"]:hover, div.contact .form .formgroup input[type="submit"]:focus {
   background-color: #96c1ae;
   color: white;
@@ -1194,7 +1164,7 @@ div.contact .form .formgroup input[type="submit"]:hover, div.contact .form .form
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 88, ../../sass/partials/contact.scss */
+/* line 87, ../../sass/partials/contact.scss */
 div.contact .form .formgroup span {
   line-height: 1.7rem;
   color: #c95a5d;

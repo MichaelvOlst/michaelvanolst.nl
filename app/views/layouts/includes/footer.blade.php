@@ -1,9 +1,9 @@
 <footer>
 	<div class="social-contact">
 		<ul>
-			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="https://www.facebook.com/Michaelvolst"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="https://twitter.com/michaelvolst"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="https://www.linkedin.com/pub/michael-van-olst/45/910/6b4"><i class="fa fa-linkedin"></i></a></li>
 		</ul>
 	</div>
 	

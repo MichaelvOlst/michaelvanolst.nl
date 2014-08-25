@@ -8,7 +8,7 @@
 					<h1 class="animated bounceInLeft">{{ $info->title }}</h1>
 					<p class="about animated bounceInLeft">{{ nl2br($info->story) }}</p>
 					<img class="animated bounceInRight" src="assets/images/michaelvanolst.jpg" alt="">
-					<a href="{{ URL::route('contact') }}" class="button gray animated bounceInLeft"> Get in touch</a>
+					<a href="{{ URL::route('contact') }}" class="button white animated bounceInLeft"> Get in touch</a>
 					
 				@endforeach
  			</div>

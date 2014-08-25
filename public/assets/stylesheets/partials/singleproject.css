@@ -1,20 +1,26 @@
 /*
 Syntax error: Undefined variable: "$mobile".
-        on line 3 of /Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss
-
-1: /Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss
+        on line 9 of /Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss
 
 Backtrace:
-/Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss:3
+/Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss:9
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/node.rb:40:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/operation.rb:73:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/script/node.rb:40:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:398:in `block in run_interp_no_strip'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:396:in `map'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:396:in `run_interp_no_strip'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:406:in `run_interp'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:360:in `visit_media'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:100:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -82,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$mobile\".\A         on line 3 of /Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss\A \A 1: /Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss"; }
+  content: "Syntax error: Undefined variable: \"$mobile\".\A         on line 9 of /Users/Michael/Dropbox/www/michaelvanolst/public/sass/partials/singleproject.scss"; }

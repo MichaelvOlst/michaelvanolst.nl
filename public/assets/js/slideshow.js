@@ -1,5 +1,5 @@
-$('#slideshow').cycle({
-	prev:   '#prev', 
-	next:   '#next',
-	delay: 5000
-});
+// $('#slideshow').cycle({
+// 	prev:   '#prev', 
+// 	next:   '#next',
+// 	delay: 5000
+// });

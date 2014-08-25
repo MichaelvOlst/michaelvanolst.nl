@@ -1,126 +1,70 @@
 .singleprojects{
-	margin: 10% auto -5%;
-	@media screen and (max-width: $mobile and $tablet){
-			width: 90%;
-		}
-
-	a{
-		font-size: 1.3rem;
-		position: relative;
-		top: -120px;
-		width: 10%;
-		
-		@media screen and (max-width: $tablet){
-			width: auto;
-			top: -110px;
-		}
-
-		@media screen and (max-width: $mobile){
-			width: auto;
-			top: -50px;
-		}
-	}
-
-	#slideshow{
-		width: 100% !important;
-		margin: 0 auto;
-
-		img{
-			width: 100%;
-			height: 500px;
-
-			@media screen and (max-width: $mobile and $tablet){
-				height: 300px;
-			}
-		}
-	}
-	.control{
-		width: 100%;
-		margin: 0 auto;
-		position: relative;
-
-		#prev, #next{
-			font-size: 3rem;
-			display: inline-block;
-			position: absolute;
-			cursor: pointer;
-		}
-		#prev{
-			left: 0;
-		}
-		#next{
-			right: 0;
-		}
-	}
+	margin: 10% auto;
+	width: 90%;
 	
-	.text{
-		width: 100%;
+	.work-bio{
+		width: 30%;
 		min-height: 500px;
-		margin: 10% auto 15%;
-
-		.description{
-			float: left;
-			width: 60%;
-			height: 100%;
-			background: $white;
-			margin-bottom: 5%;
-			@include box-shadow( 0 3px 3px $lightergray);	
+		float: left;
 			@media screen and (max-width: $mobile){
 				width: 100%;
 				display: block;
 				float: none;
-			}	
+				z-index: -1;
+				margin-bottom: 10%;
+				position: relative;
+			}
+		
+		.button{
+			width: 80px;
+			height: 80px;
+			@include border-radius(50%);
+			background: $blue;
+			font-size: 1rem;
+			text-align: center;
+			color: #fff;
+		}
+
+		.description{
+			width: 100%;
+				
 
 			h1{
 				font-size: 2.5rem;
 				position: relative;
 				color: $lightblue;
-				text-align: center;
 				margin-bottom: 10%;
 				line-height: 1.7em;
+				border-bottom: 5px solid $darkgray;
 			}
 			p{
-				font-size: 1.5rem;
-				line-height: 3rem;
-				margin: 0 auto;
-				text-align: center;
-				width: 80%;
+				font-size: 1rem;
+				line-height: 2rem;
+				width: 100%;
+				height: auto;
+				display: block;
 			}
 
-			.button{
-				text-align: center;
-				margin: 8rem 10% 0;
-				left: 0;
-				padding: 1% 10%;
-				width: 80%;
-				top: -60px;
-				color: #fff;
-			}
+		
 		}
 
 		.build{
-			width: 30%;
-			float: right;
-			min-height: 200px;
-			padding-bottom: 5%;
-			background: $white;
-			@include box-shadow( 0 3px 3px $lightergray);
 			@media screen and (max-width: $tablet){
-				width: 35%;
+				width: 100%;
 			}
 			@media screen and (max-width: $mobile){
 				float: none;
 				width: 100%;
 				padding-bottom: 5%;
+				z-index: -1;
 			}
 
 			h2{
-				margin: 0;
 				color: $lightblue;
 				line-height: 2em;
-				font-size: 2rem;
+				font-size: 1.5rem;
 				margin-bottom: 10%;
-				text-align: center;
+				display: block;
 
 				@media screen and (max-width: $mobile){
 					margin-bottom: 5%;
@@ -128,23 +72,50 @@
 			}
 
 			ul{
-				text-align: center;
-
+				list-style-type: none;
+				
 				@media screen and (max-width: $mobile){
-					width: 60%;		
+					width: 100%;		
 					padding: 0;	
 					margin: 0 auto;
 				}
 				li{
-					font-size: 1.5rem;
+					font-size: 1.2rem;
 					line-height: 2.5rem;
+					display: inline-block;
+					margin-right: 10%;
+					z-index: 999;
+					
 
 					@media screen and (max-width: $mobile){
 						display: inline-block;
-						width: 49%;
+						margin-right: 15%;
 					}
 				}
 			}
 		}
-	} // text
+	} // work-bio
+	
+	#pictures{
+		width: 60%;
+		float: right;
+		background-color: $lightgray;
+
+		@media screen and (max-width: $mobile){
+				width: 100%;
+				display: block;
+				float: none;
+				z-index: 999;
+				position: relative;
+			}
+		li{
+
+			border-bottom: 10px solid $lightgray;
+			img{
+				width: 100%;
+				
+			}
+		}
+		
+	}
 }

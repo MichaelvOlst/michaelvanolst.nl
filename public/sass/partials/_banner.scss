@@ -3,7 +3,7 @@ div.banner{
 	background-color: $cyanblue;
 	width: 100%;	
 	position: relative;
-	min-height: 700px;
+	z-index: 100;
 	
 	div.intro{
 		background-color: transparent;
@@ -14,6 +14,7 @@ div.banner{
 	    min-width: 220px;
 	    @include border-radius(5px);
 	    @media screen and (max-width: $mobile){
+	    	padding-top: 10%;
 	    	width: 90%;
 	    }
 
