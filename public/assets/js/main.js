@@ -11,7 +11,7 @@
 
 		fadeOutBanner();
 		
-		scrollingWorkBio();
+		//scrollingWorkBio();
 			
 		
 })(jQuery);
