@@ -773,7 +773,7 @@ div.projects article img {
     width: 100%;
     display: block;
     float: none;
-    z-index: -1;
+    z-index: 101;
     margin-bottom: 10%;
     position: relative;
   }
@@ -791,12 +791,13 @@ div.projects article img {
   font-size: 1rem;
   text-align: center;
   color: #fff;
+  display: inline-block;
 }
-/* line 28, ../../sass/partials/singleproject.scss */
+/* line 29, ../../sass/partials/singleproject.scss */
 .singleprojects .work-bio .description {
   width: 100%;
 }
-/* line 32, ../../sass/partials/singleproject.scss */
+/* line 33, ../../sass/partials/singleproject.scss */
 .singleprojects .work-bio .description h1 {
   font-size: 2.5rem;
   position: relative;
@@ -805,7 +806,7 @@ div.projects article img {
   line-height: 1.7em;
   border-bottom: 5px solid #41595c;
 }
-/* line 40, ../../sass/partials/singleproject.scss */
+/* line 41, ../../sass/partials/singleproject.scss */
 .singleprojects .work-bio .description p {
   font-size: 1rem;
   line-height: 2rem;
@@ -814,13 +815,13 @@ div.projects article img {
   display: block;
 }
 @media screen and (max-width: 1000px) {
-  /* line 51, ../../sass/partials/singleproject.scss */
+  /* line 52, ../../sass/partials/singleproject.scss */
   .singleprojects .work-bio .build {
     width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
-  /* line 51, ../../sass/partials/singleproject.scss */
+  /* line 52, ../../sass/partials/singleproject.scss */
   .singleprojects .work-bio .build {
     float: none;
     width: 100%;
@@ -828,7 +829,7 @@ div.projects article img {
     z-index: -1;
   }
 }
-/* line 62, ../../sass/partials/singleproject.scss */
+/* line 63, ../../sass/partials/singleproject.scss */
 .singleprojects .work-bio .build h2 {
   color: #4e9fe9;
   line-height: 2em;
@@ -837,24 +838,24 @@ div.projects article img {
   display: block;
 }
 @media screen and (max-width: 800px) {
-  /* line 62, ../../sass/partials/singleproject.scss */
+  /* line 63, ../../sass/partials/singleproject.scss */
   .singleprojects .work-bio .build h2 {
     margin-bottom: 5%;
   }
 }
-/* line 74, ../../sass/partials/singleproject.scss */
+/* line 75, ../../sass/partials/singleproject.scss */
 .singleprojects .work-bio .build ul {
   list-style-type: none;
 }
 @media screen and (max-width: 800px) {
-  /* line 74, ../../sass/partials/singleproject.scss */
+  /* line 75, ../../sass/partials/singleproject.scss */
   .singleprojects .work-bio .build ul {
     width: 100%;
     padding: 0;
     margin: 0 auto;
   }
 }
-/* line 82, ../../sass/partials/singleproject.scss */
+/* line 83, ../../sass/partials/singleproject.scss */
 .singleprojects .work-bio .build ul li {
   font-size: 1.2rem;
   line-height: 2.5rem;
@@ -863,33 +864,33 @@ div.projects article img {
   z-index: 999;
 }
 @media screen and (max-width: 800px) {
-  /* line 82, ../../sass/partials/singleproject.scss */
+  /* line 83, ../../sass/partials/singleproject.scss */
   .singleprojects .work-bio .build ul li {
     display: inline-block;
     margin-right: 15%;
   }
 }
-/* line 99, ../../sass/partials/singleproject.scss */
+/* line 100, ../../sass/partials/singleproject.scss */
 .singleprojects #pictures {
   width: 60%;
   float: right;
   background-color: #e2e2e2;
 }
 @media screen and (max-width: 800px) {
-  /* line 99, ../../sass/partials/singleproject.scss */
+  /* line 100, ../../sass/partials/singleproject.scss */
   .singleprojects #pictures {
     width: 100%;
     display: block;
     float: none;
-    z-index: 999;
+    z-index: 110;
     position: relative;
   }
 }
-/* line 111, ../../sass/partials/singleproject.scss */
+/* line 112, ../../sass/partials/singleproject.scss */
 .singleprojects #pictures li {
   border-bottom: 10px solid #e2e2e2;
 }
-/* line 114, ../../sass/partials/singleproject.scss */
+/* line 115, ../../sass/partials/singleproject.scss */
 .singleprojects #pictures li img {
   width: 100%;
 }
