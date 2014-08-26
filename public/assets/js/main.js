@@ -25,10 +25,10 @@ function displayParagraphs(){
  			that = $(this);
  			
         if(that.hasClass("less")) {
-            that.html("Read less -");
+            that.html("Read more +");
             that.removeClass("less");
         } else {
-            that.html("Read more +");
+            that.html("Read less -");
             that.addClass("less");
         }
         that.parent().prev().slideToggle();
