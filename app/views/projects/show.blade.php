@@ -9,16 +9,20 @@
 			 		<h1>{{ $project->title }}</h1>
 			 		<p>{{ $project->description }}</p>	
 			 	</article>
-		 		<article class="build">
-		 			<h2>Build with:</h2>
-		 			<ul>
-		 				@foreach ( explode(',',$project->skills) as $skill)
-							<li>{{ $skill }}</li>
-		 				@endforeach
- 					</ul>
-		 		</article>
-		 		<a class="fa fa-long-arrow-left button" href="{{URL::route('projects.index')}}"> back</a>
-			 	<a href="//{{$project->link}}" target="_blank" class="button ">View site</a>
+			 	<div class="toggle">
+			 		<article class="build">
+			 			<h2>Build with</h2>
+			 			<ul>
+			 				@foreach ( explode(',',$project->skills) as $skill)
+								<li>{{ $skill }}</li>
+			 				@endforeach
+	 					</ul>
+			 		</article>
+				 	<a href="//{{$project->link}}" target="_blank" class="link">Visit website</a>
+			 		<a class="button fa fa-angle-left" href="{{URL::route('projects.index')}}"></a>
+		 		</div>
+		 		
+			 	<a href="#" class="read-more">Read more +</a>
 		 	</section>
 		 	
 		 	 <section id="pictures">
@@ -34,11 +38,5 @@
  		</article>
  		
  		
-	@stop
-
-	@section('scripts')
-	
-		{{ HTML::script('//cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20130801/jquery.cycle2.min.js') }}
-		{{ HTML::script('assets/js/slideshow.js') }}
 	@stop
 

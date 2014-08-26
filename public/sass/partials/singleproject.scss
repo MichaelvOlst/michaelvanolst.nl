@@ -4,7 +4,6 @@
 	
 	.work-bio{
 		width: 30%;
-		min-height: 500px;
 		float: left;
 			@media screen and (max-width: $mobile){
 				width: 100%;
@@ -12,23 +11,31 @@
 				float: none;
 				z-index: 101;
 				margin-bottom: 10%;
+				height: auto;
 				position: relative;
 			}
+		
+		.link{
+			border-bottom: 1px solid $darkgray;
+		}
 		
 		.button{
 			width: 80px;
 			height: 80px;
 			@include border-radius(50%);
 			background: $blue;
-			font-size: 1rem;
+			font-size: 3rem;
+			display: block;
+			margin-top: 50px;
 			text-align: center;
 			color: #fff;
-			display: inline-block;
+			position: relative;
+			padding-top: 17px;
 		}
 
 		.description{
 			width: 100%;
-				
+			margin-bottom: 30px;	
 
 			h1{
 				font-size: 2.5rem;
@@ -45,11 +52,28 @@
 				height: auto;
 				display: block;
 			}
-
+		}
 		
+		.toggle{
+			@media screen and (max-width: $mobile)
+			{
+				display: none;
+			}
+		}
+		.read-more{
+			margin-top: 30px;
+			margin-bottom: 30px;
+			
+			display: none;
+			@media screen and (max-width: $mobile){
+				display: block;
+			}
+			
 		}
 
 		.build{
+			margin-bottom: 30px;
+			
 			@media screen and (max-width: $tablet){
 				width: 100%;
 			}
@@ -61,10 +85,10 @@
 			}
 
 			h2{
-				color: $lightblue;
+				color: $blue;
 				line-height: 2em;
 				font-size: 1.5rem;
-				margin-bottom: 10%;
+				font-weight: 900;
 				display: block;
 
 				@media screen and (max-width: $mobile){
@@ -77,8 +101,7 @@
 				
 				@media screen and (max-width: $mobile){
 					width: 100%;		
-					padding: 0;	
-					margin: 0 auto;
+					padding-left: 5%;	
 				}
 				li{
 					font-size: 1.2rem;
@@ -90,7 +113,8 @@
 
 					@media screen and (max-width: $mobile){
 						display: inline-block;
-						margin-right: 15%;
+						margin: 0;
+						width: 40%;
 					}
 				}
 			}

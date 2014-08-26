@@ -12,9 +12,33 @@
 		fadeOutBanner();
 		
 		//scrollingWorkBio();
+		
+		displayParagraphs();
 			
 		
 })(jQuery);
+
+function displayParagraphs(){
+	$('a.read-more').on('click', function(e){
+ 
+ 		var toggle = $('div.toggle'),
+ 			that = $(this);
+ 			
+        if(that.hasClass("less")) {
+            that.html("Read less -");
+            that.removeClass("less");
+        } else {
+            that.html("Read more +");
+            that.addClass("less");
+        }
+        that.parent().prev().slideToggle();
+        that.prev().slideToggle();
+        
+        e.preventDefault();
+	});
+	
+	
+}
 
 function scrollingWorkBio(){
 	$(window).scroll(function (){
